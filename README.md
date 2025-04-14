@@ -18,7 +18,7 @@ All requests require an API key provided by The DART Project team. Include your 
 X-API-Key: your_api_key_here
 ```
 
-To request an API key, please contact the DART Project team.
+To request an API key, please contact the `sinewave_` on Discord.
 
 ## Endpoints
 
