@@ -1,0 +1,18 @@
+{
+  "name": "dart-project-reporting-api",
+  "version": "1.0.0",
+  "description": "API for reporting malicious Discord URLs to The DART Project",
+  "main": "api/report.js",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "dotenv": "^16.3.1",
+    "lru-cache": "^10.1.0"
+  },
+  "devDependencies": {
+    "vercel": "^32.5.6"
+  }
+}
