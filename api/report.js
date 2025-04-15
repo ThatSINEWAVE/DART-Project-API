@@ -47,7 +47,7 @@ module.exports = async (req, res) => {
     // Return success response
     return res.status(200).json({
       success: true,
-      message: 'Report received and forwarded to Discord',
+      message: 'Report received and forwarded to the DART Project',
       report_id: `${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
     });
 

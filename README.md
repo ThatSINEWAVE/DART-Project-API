@@ -32,19 +32,19 @@ Submit a report of a malicious URL encountered on Discord.
 
 #### Request Headers
 
-| Header | Required | Description |
-|--------|----------|-------------|
-| Content-Type | Yes | Must be set to `application/json` |
-| X-API-Key | Yes | Your DART Project API key |
+| Header       | Required | Description                       |
+|--------------|----------|-----------------------------------|
+| Content-Type | Yes      | Must be set to `application/json` |
+| X-API-Key    | Yes      | Your DART Project API key         |
 
 #### Request Body
 
-| Field | Type | Required | Description |
-|-------|------|----------|-------------|
-| url | String | Yes | The suspicious URL that was shared |
-| date | String | Yes | ISO 8601 formatted date when the URL was shared (e.g., `2025-04-14T12:00:00Z`) |
-| discord_id | String | No | Discord user ID of the account that shared the URL |
-| notes | String | No | Additional information about the URL or context |
+| Field      | Type   | Required | Description                                                                    |
+|------------|--------|----------|--------------------------------------------------------------------------------|
+| url        | String | Yes      | The suspicious URL that was shared                                             |
+| date       | String | Yes      | ISO 8601 formatted date when the URL was shared (e.g., `2025-04-14T12:00:00Z`) |
+| discord_id | String | No       | Discord user ID of the account that shared the URL                             |
+| notes      | String | No       | Additional information about the URL or context                                |
 
 #### Example Request
 
@@ -64,20 +64,20 @@ A successful response will return a 200 status code and a JSON object:
 ```json
 {
   "success": true,
-  "message": "Report received and forwarded to Discord",
+  "message": "Report received and forwarded to the DART Project",
   "report_id": "1713203716543-x7f2g9p3q"
 }
 ```
 
 ## Error Handling
 
-| Status Code | Description |
-|-------------|-------------|
-| 200 | Success - Report has been processed |
-| 400 | Bad Request - Missing required fields or invalid data |
-| 401 | Unauthorized - Invalid or missing API key |
-| 429 | Too Many Requests - Rate limit exceeded (120 requests per minute) |
-| 500 | Internal Server Error - Something went wrong on our end |
+| Status Code | Description                                                       |
+|-------------|-------------------------------------------------------------------|
+| 200         | Success - Report has been processed                               |
+| 400         | Bad Request - Missing required fields or invalid data             |
+| 401         | Unauthorized - Invalid or missing API key                         |
+| 429         | Too Many Requests - Rate limit exceeded (120 requests per minute) |
+| 500         | Internal Server Error - Something went wrong on our end           |
 
 ### Error Response Examples
 
